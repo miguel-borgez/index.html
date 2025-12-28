@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Bê</title>
+
+<style>
+
+    .frase-final {
+    margin-top: 60px;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.frase-final.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajuste fino para iPhone 12 */
+@media (max-width: 390px) {
+    .frase-final {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+}
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f7e7e3, #f2f2f2);
+        font-family: "Georgia", serif;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* FLORES */
+    .flores span {
+        position: fixed;
+        top: -10%;
+        font-size: 24px;
+        opacity: 0.35;
+        animation: cair linear infinite;
+        pointer-events: none;
+    }
+
+    .flores span:nth-child(1) { left: 8%; animation-duration: 14s; }
+    .flores span:nth-child(2) { left: 22%; animation-duration: 18s; font-size: 20px; }
+    .flores span:nth-child(3) { left: 38%; animation-duration: 16s; }
+    .flores span:nth-child(4) { left: 55%; animation-duration: 20s; font-size: 22px; }
+    .flores span:nth-child(5) { left: 70%; animation-duration: 15s; }
+    .flores span:nth-child(6) { left: 85%; animation-duration: 19s; font-size: 18px; }
+
+    @keyframes cair {
+        from { transform: translateY(0); }
+        to { transform: translateY(140vh); }
+    }
+
+    /* CARTA */
+    .carta {
+        margin-top: 80px;
+        width: 620px;
+        max-width: 90%;
+        background-color: rgba(255,255,255,0.96);
+        padding: 45px;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: normal;
+        margin-bottom: 40px;
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 32px;
+    }
+
+    .assinatura {
+        margin-top: 50px;
+        text-align: right;
+        font-style: italic;
+        font-size: 17px;
+    }
+
+    /* REVELAÇÃO */
+    .revelar {
+        opacity: 0;
+        transform: translateY(25px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .revelar.visivel {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ÁREA DO VÍDEO */
+    .video-area {
+        margin: 140px 0 80px;
+        width: 720px;
+        max-width: 92%;
+        text-align: center;
+    }
+
+    .video-area p {
+        font-size: 17px;
+        margin-bottom: 22px;
+        opacity: 0.85;
+    }
+
+    video {
+        width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    /* IPHONE 12 */
+    @media (max-width: 390px) {
+        .carta {
+            padding: 32px 26px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="flores">
+    <span>🌸</span><span>🌷</span><span>🌸</span>
+    <span>🌷</span><span>🌸</span><span>🌷</span>
+</div>
+
+<div class="carta">
+    <h1>Bê,</h1>
+
+    <p class="revelar">
+        Mesmo com pouco tempo juntos,
+        você já me ensinou muito
+        sobre o que é um relacionamento saudável.
+    </p>
+
+    <p class="revelar">
+        Sempre tive dificuldade em confiar
+        e em me entregar por inteiro.
+        Você, sem perceber,
+        tem mudado isso em mim.
+    </p>
+
+    <p class="revelar">
+        Admiro sua inteligência,
+        seu romantismo
+        e esse jeito leve e engraçado
+        de enxergar o mundo.
+    </p>
+
+    <p class="revelar">
+        Você é flor,
+        mas também é raiz:
+        delicada,
+        forte
+        e cheia de vida.
+    </p>
+
+    <p class="revelar">
+        Mesmo não podendo estar
+        fisicamente ao seu lado agora,
+        me imagino com você o tempo todo,
+        te enchendo de beijos
+        e cafuné kkk.
+    </p>
+
+    <p class="revelar">
+        Sei que estamos em uma fase
+        de adaptação,
+        aprendendo um ao outro.
+    </p>
+
+    <p class="revelar">
+        Mas quero que saiba:
+        no que depender de mim,
+        farei tudo o possível
+        para superar qualquer obstáculo
+        e ficarmos juntos.
+    </p>
+
+    <p class="revelar">
+        Sempre firmes em nossos valores,
+        pois tudo que começa com Deus,
+        só dá certo
+        se permanece em Deus.
+    </p>
+
+    <div class="assinatura revelar">
+        Com carinho,<br>
+        de quem te escolhe todos os dias
+    </div>
+</div>
+
+<div class="video-area">
+
+    <div id="frase-final" class="frase-final">
+    Depois de tudo isso, se restar alguma dúvida,
+    em mim não resta nenhuma: é você.
+</div>
+
+    <p>⬇ Um pedacinho do que sinto por você ⬇</p>
+
+    <!-- SUBSTITUA PELO NOME DO SEU VÍDEO -->
+    <video  controls
+            playsinline
+            preload="metadata"
+            poster="capa.jpg"
+    >
+        <source src="https://collection.cloudinary.com/dpjyuxtoj/f531901d8bfbd27366477011420f6f67" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+</div>
+
+<script>
+    const elementos = document.querySelectorAll('.revelar');
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visivel');
+                }
+            });
+        },
+        { threshold: 0.25 }
+    );
+
+    elementos.forEach(el => observer.observe(el));
+
+         const video = document.querySelector("video");
+    const fraseFinal = document.getElementById("frase-final");
+
+    video.addEventListener("ended", () => {
+        fraseFinal.classList.add("visivel");
+        fraseFinal.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+
+</script>
+
+</body>
+</html>
